@@ -8,6 +8,41 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Uid="payslipHeader" Text="Payslip Details" HorizontalAlignment="Center" FontSize="20" Margin="0,15,0,0"></TextBlock>
 
+        <StackPanel x:Name="spInput" Margin="0,50,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBox x:Name="EmpName" x:Uid="EmpName" Margin="5,0,0,0" PlaceholderText="Employee Name" Width="170" Height="20"></TextBox>
+            <TextBox x:Name="PayeeName" x:Uid="PayeeName" Margin="5,0,0,0" PlaceholderText="Payee Name" Width="170" Height="20"></TextBox>
+        </StackPanel>
+
+        <StackPanel x:Name="spInput2" Margin="0,85,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBox x:Name="PayeeAddress" x:Uid="PayeeAddress" Margin="5,0,0,0" PlaceholderText="Payee Address" Width="170" Height="20"></TextBox>
+            <TextBox x:Name="Date" x:Uid="Date" Margin="5,0,0,0" PlaceholderText="Date" Width="170" Height="20"></TextBox>
+        </StackPanel>
+
+        <StackPanel x:Name="spInput3" Margin="0,120,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBox x:Name="Rate" x:Uid="Rate" Margin="5,0,0,0" PlaceholderText="Payee Rate" Width="170" Height="20"></TextBox>
+            <TextBox x:Name="Hours" x:Uid="Hours" Margin="5,0,0,0"  PlaceholderText="Hours Worked" Width="170" Height="20"></TextBox>
+        </StackPanel>
+
+        <Button x:Name="calcPay" x:Uid="calcPay" Content="Calc Payslip" Margin="0,165,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"
+                Click="calcPay_Click"></Button>
+
+        <StackPanel x:Name="display" Margin="0,210,0,0">
+            <TextBlock x:Name="outempName" x:Uid="outempName" Text="Employer: " Margin="5,0,0,0" TextWrapping="Wrap" Visibility="Collapsed"></TextBlock>
+            <TextBlock x:Name="outDate" x:Uid="outDate" Text="Date: " Margin="5,0,0,0" TextWrapping="Wrap" Visibility="Collapsed"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="outpayeeName" x:Uid="outpayeeName" Text="Payee: " Margin="5,0,0,0" TextWrapping="Wrap" Visibility="Collapsed"></TextBlock>
+                <TextBlock x:Name="outAddress" x:Uid="outAddress" Text="Address: " Margin="35,0,0,0" TextWrapping="Wrap" Visibility="Collapsed"></TextBlock>
+            </StackPanel>
+
+            <TextBlock x:Name="outWage" x:Uid="outWage" Text="Wage: " Margin="5,10,0,0" Visibility="Collapsed"></TextBlock>
+
+            <TextBlock x:Name="outPaye" x:Uid="outPaye" Text="PAYE: " Margin="110,10,0,0" Visibility="Collapsed"></TextBlock>
+            <TextBlock x:Name="outPrsi" x:Uid="outPrsi" Text="Prsi: " Margin="110,0,0,0" Visibility="Collapsed"></TextBlock>
+            <TextBlock x:Name="outUsc" x:Uid="outUsc" Text="Usc: " Margin="110,0,0,0" Visibility="Collapsed"></TextBlock>
+
+            <TextBlock x:Name="outNet" x:Uid="outNet" Text="Net Pay: " Margin="210,0,0,0" Visibility="Collapsed"></TextBlock>
+        </StackPanel>
     </Grid>
 </Page>

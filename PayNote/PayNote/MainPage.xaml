@@ -12,7 +12,7 @@
                    HorizontalAlignment="Center" Margin="25,55,0,0"></TextBlock>
 
         <StackPanel x:Name="Sp" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,0,0,15">
-            <Button x:Name="calcPay" Width="125" x:Uid="calcPay" Content="Payslip" 
+            <Button x:Name="calcPayNav" Width="125" x:Uid="calcPayNav" Content="Payslip" 
                     Click="calcPay_Click"></Button>
             <Button x:Name="SavedPayslips" Width="125" Margin="0,15,0,0" x:Uid="savedPayslips" Content="Saved Payslips"
                     Click="SavedPayslips_Click"></Button>
