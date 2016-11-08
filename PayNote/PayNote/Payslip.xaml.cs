@@ -154,6 +154,8 @@ namespace PayNote
             outPrsi.Visibility = Visibility.Visible;
             outUsc.Visibility = Visibility.Visible;
             outNet.Visibility = Visibility.Visible;
+
+            savepayslip.Visibility = Visibility.Visible;
             
             //output text to textblocks
             outempName.Text += empname.ToString();

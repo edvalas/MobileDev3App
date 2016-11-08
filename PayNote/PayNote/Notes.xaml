@@ -8,11 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="notesHeader" x:Uid="notesHeader" Text="Notes" Margin="0,10,0,0" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock x:Name="notesHeader" x:Uid="notesHeader" Text="" Margin="0,10,0,0" FontSize="20" HorizontalAlignment="Center"></TextBlock>
 
         <TextBox x:Name="notesText" x:Uid="notesText" Margin="10,50,10,70" TextWrapping="Wrap"></TextBox>
 
-        <Button x:Name="saveNotes" x:Uid="saveNotes" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+        <Button x:Name="saveNotes" x:Uid="saveNotes" Content="" HorizontalAlignment="Center" VerticalAlignment="Bottom"
                 Click="saveNotes_Click"></Button>
     </Grid>
 </Page>

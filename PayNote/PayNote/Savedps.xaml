@@ -10,14 +10,14 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel x:Name="sp">
-                <TextBlock x:Name="headerps" x:Uid="headerps" Text="Payslips"
+                <TextBlock x:Name="headerps" x:Uid="headerps" Text=""
                    HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
 
                 <TextBlock x:Name="savedps" HorizontalAlignment="Center" VerticalAlignment="Top"
                        Margin="0,35,0,0" Text="" TextWrapping="Wrap"></TextBlock>
 
                 <Button x:Name="clearpayslips" HorizontalAlignment="Center" 
-                        Margin="0,0,0,10" x:Uid="clearpayslips" Content="clear payslips"
+                        Margin="0,0,0,10" x:Uid="clearpayslips" Content=""
                         Click="clearpayslips_Click"></Button>
             </StackPanel>
         </ScrollViewer>
