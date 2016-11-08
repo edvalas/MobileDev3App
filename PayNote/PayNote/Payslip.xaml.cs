@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -164,6 +165,48 @@ namespace PayNote
             outPrsi.Text += Prsi.ToString("$0.00");
             outUsc.Text += Usc.ToString("$0.00");
             outNet.Text += netpay.ToString("$0.00");
+        }
+
+        private async void savepayslip_Click(object sender, RoutedEventArgs e)
+        {
+            //check if there is text in the textblock before you save empty string to a file
+            if (outNet.Text.ToString() == "")
+            {
+                //display error 
+                await new MessageDialog("No payslips calculated").ShowAsync();
+            }
+            else
+            {
+                //get a link to current folder
+                StorageFolder payslipFolder = ApplicationData.Current.LocalFolder;
+                //file
+                StorageFile payslips;
+                //string to contain current file contents
+                string fileText = "";
+
+                try
+                {
+                    //get the file and its contents to a string
+                    payslips = await payslipFolder.GetFileAsync("payslips.txt");
+                    fileText = await Windows.Storage.FileIO.ReadTextAsync(payslips);
+                }
+                catch (Exception E)
+                {
+                    //if its not there create a new file
+                    string message = E.Message;
+                    payslips = await payslipFolder.CreateFileAsync("payslips.txt");
+                }
+                //string to add on to the file contents
+                string output;
+                // which is equal to the text of the calculated payslip
+                output = outempName.Text.ToString() + " \n" + outDate.Text.ToString() + " \n" + outpayeeName.Text.ToString() + ",  " + outAddress.Text.ToString() +
+                    " \n" + outWage.Text.ToString() + " \n" + outPaye.Text.ToString() + " \n" + outPrsi.Text.ToString() + " \n" + outUsc.Text.ToString() +
+                    " \n" + outNet.Text.ToString();
+                //write back to the file its original contents plus the output of payslip calculation
+                await Windows.Storage.FileIO.WriteTextAsync(payslips, fileText + output + System.Environment.NewLine + System.Environment.NewLine);
+                //msg dialog
+                await new MessageDialog("saved to file").ShowAsync();
+            }
         }
     }
 }

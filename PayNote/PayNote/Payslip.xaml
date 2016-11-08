@@ -44,5 +44,8 @@
 
             <TextBlock x:Name="outNet" x:Uid="outNet" Text="Net Pay: " Margin="210,0,0,0" Visibility="Collapsed"></TextBlock>
         </StackPanel>
+
+        <Button x:Name="savepayslip" x:Uid="savepayslip" Content="save payslip" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                Click="savepayslip_Click"></Button>
     </Grid>
 </Page>
