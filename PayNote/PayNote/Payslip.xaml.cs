@@ -100,14 +100,32 @@ namespace PayNote
 
             if (Rate.Text.ToString() != "")
             {
-                rate = Convert.ToDouble(Rate.Text.ToString());
-                validCount++;
+                try
+                {
+                    rate = Convert.ToDouble(Rate.Text);
+                    validCount++;
+                }
+                catch
+                {
+                    MessageDialog Dialog = new MessageDialog("Input must be numeric");
+                    await Dialog.ShowAsync();
+                }
+                
             }
 
             if (Hours.Text.ToString() != "")
             {
-                hours = Convert.ToDouble(Hours.Text.ToString());
-                validCount++;
+                try
+                {
+                    hours = Convert.ToDouble(Hours.Text.ToString());
+                    validCount++;
+                }
+                catch
+                {
+                    MessageDialog Dialog = new MessageDialog("Input must be numeric");
+                    await Dialog.ShowAsync();
+                }
+                
             }
 
             if (validCount != 6)
@@ -158,15 +176,15 @@ namespace PayNote
             savepayslip.Visibility = Visibility.Visible;
             
             //output text to textblocks
-            outempName.Text += empname.ToString();
-            outpayeeName.Text += payeename.ToString();
-            outDate.Text += date.ToString();
-            outAddress.Text += payeeaddress.ToString();
-            outWage.Text += wage.ToString("$0.00");
-            outPaye.Text += Paye.ToString("$0.00");
-            outPrsi.Text += Prsi.ToString("$0.00");
-            outUsc.Text += Usc.ToString("$0.00");
-            outNet.Text += netpay.ToString("$0.00");
+            outempName.Text = (Localization.Get("outempName")).ToString() + empname.ToString();
+            outpayeeName.Text = (Localization.Get("outpayeeName")) + payeename.ToString();
+            outDate.Text = (Localization.Get("outDate")) + date.ToString();
+            outAddress.Text = (Localization.Get("outAddress")) + payeeaddress.ToString();
+            outWage.Text = (Localization.Get("outWage")) + wage.ToString("$0.00");
+            outPaye.Text = (Localization.Get("outPaye")) + Paye.ToString("$0.00");
+            outPrsi.Text = (Localization.Get("outPrsi")) + Prsi.ToString("$0.00");
+            outUsc.Text = (Localization.Get("outUsc")) + Usc.ToString("$0.00");
+            outNet.Text = (Localization.Get("outNet")) + netpay.ToString("$0.00");
         }
 
         private async void savepayslip_Click(object sender, RoutedEventArgs e)

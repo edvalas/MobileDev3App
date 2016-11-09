@@ -118,49 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="calcPay.Content" xml:space="preserve">
-    <value>Calculate Payslip</value>
+    <value>Calcular Paquete</value>
   </data>
   <data name="calcPayNav.Content" xml:space="preserve">
-    <value>Payslip</value>
+    <value>Paquete</value>
   </data>
   <data name="clearpayslips.Content" xml:space="preserve">
-    <value>Clear Payslips</value>
+    <value>Claro Paquete</value>
   </data>
   <data name="Date.PlaceholderText" xml:space="preserve">
-    <value>Date</value>
+    <value>Fecha</value>
   </data>
   <data name="EmpName.PlaceholderText" xml:space="preserve">
-    <value>Employer Name</value>
+    <value>Empleador Nombre</value>
   </data>
   <data name="headerps.Text" xml:space="preserve">
-    <value>Saved Payslips</value>
+    <value>Guardar Nóminas de Pago</value>
   </data>
   <data name="Hours.PlaceholderText" xml:space="preserve">
-    <value>Hours Worked</value>
+    <value>Horas Trabajar</value>
   </data>
   <data name="Notes.Content" xml:space="preserve">
-    <value>Notes</value>
+    <value>Notas</value>
   </data>
   <data name="notesHeader.Text" xml:space="preserve">
-    <value>Notes</value>
+    <value>Notas</value>
   </data>
   <data name="outAddress" xml:space="preserve">
-    <value>Address: </value>
+    <value>Dirección</value>
   </data>
   <data name="outDate" xml:space="preserve">
-    <value>Date: </value>
+    <value>Fecha</value>
   </data>
   <data name="outempName" xml:space="preserve">
-    <value>Employer: </value>
+    <value>Empleador: </value>
   </data>
   <data name="outNet" xml:space="preserve">
-    <value>Net Wage: </value>
+    <value>Salario Neto: </value>
   </data>
   <data name="outPaye" xml:space="preserve">
     <value>PAYE: </value>
   </data>
   <data name="outpayeeName" xml:space="preserve">
-    <value>Payee: </value>
+    <value>Tenedor: </value>
   </data>
   <data name="outPrsi" xml:space="preserve">
     <value>Prsi: </value>
@@ -169,28 +169,28 @@
     <value>Usc: </value>
   </data>
   <data name="outWage" xml:space="preserve">
-    <value>Wage: </value>
+    <value>Salario: </value>
   </data>
   <data name="PayeeAddress.PlaceholderText" xml:space="preserve">
-    <value>Payee Address</value>
+    <value>Tenedor Direccion</value>
   </data>
   <data name="PayeeName.PlaceholderText" xml:space="preserve">
-    <value>Payee Name</value>
+    <value>Tenedor Nombre</value>
   </data>
   <data name="payslipHeader.Text" xml:space="preserve">
-    <value>Payslip Details</value>
+    <value>Paquete Detalles</value>
   </data>
   <data name="Rate.PlaceholderText" xml:space="preserve">
-    <value>Payee Rate</value>
+    <value>Tenedor Ganador</value>
   </data>
   <data name="savedPayslips.Content" xml:space="preserve">
-    <value>Saved Payslips</value>
+    <value>Guardar Paquete</value>
   </data>
   <data name="saveNotes.Content" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="savepayslip.Content" xml:space="preserve">
-    <value>Save Payslip</value>
+    <value>Guardar Nóminas de Pago</value>
   </data>
   <data name="title.Text" xml:space="preserve">
     <value>PayNote</value>

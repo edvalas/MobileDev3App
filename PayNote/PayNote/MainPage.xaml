@@ -8,15 +8,42 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="smallerState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="normalState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Sp.Background" Value="Red"/>
+                        <Setter Target="calcPayNav.Background" Value="Cyan"/>
+                        <Setter Target="SavedPayslips.Background" Value="Cyan"/>
+                        <Setter Target="Notes.Background" Value="Cyan"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <TextBlock x:Name="Title" x:Uid="title" Text="" FontSize="40" 
                    HorizontalAlignment="Center" Margin="25,55,0,0"></TextBlock>
 
         <StackPanel x:Name="Sp" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,0,0,15">
-            <Button x:Name="calcPayNav" Width="125" x:Uid="calcPayNav" Content="" 
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="calcPayNav" Width="135" Height="50" x:Uid="calcPayNav" Margin="0,0,5,0" Content="" 
                     Click="calcPay_Click"></Button>
-            <Button x:Name="SavedPayslips" Width="125" Margin="0,15,0,0" x:Uid="savedPayslips" Content=""
+                <Button x:Name="SavedPayslips" Width="135" Height="50" Margin="0,0,0,0" x:Uid="savedPayslips" Content=""
                     Click="SavedPayslips_Click"></Button>
-            <Button x:Name="Notes" Width="125" Margin="0,15,0,0" x:Uid="Notes" Content=""
+            </StackPanel>
+            
+            <Button x:Name="Notes" Width="275" Height="75" Margin="0,10,0,0" x:Uid="Notes" Content=""
                     Click="Notes_Click"></Button>
         </StackPanel>
     </Grid>
